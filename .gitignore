@@ -1,0 +1,23 @@
+# Data & checkpoints
+data/
+checkpoints/
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+.venv/
+*.egg-info/
+
+# TensorBoard
+runs/
+
+# OS / editor
+.DS_Store
+*.swp
+.idea/
+.vscode/
+
+# Secrets
+.env
+.secrets
