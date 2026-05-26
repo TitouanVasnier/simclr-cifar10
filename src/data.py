@@ -21,7 +21,7 @@ CIFAR10_STD = (0.2023, 0.1994, 0.2010)
 def simclr_augmentation() -> transforms.Compose:
     """Build the SimCLR stochastic augmentation pipeline for 32x32 images.
 
-    Following the original paper (Chen et al., 2020) — adapted for CIFAR-10:
+    Following the original paper (Chen et al., 2020) - adapted for CIFAR-10:
     * RandomResizedCrop to 32x32 with aggressive scale range.
     * Horizontal flip.
     * Color jitter (applied with p=0.8).

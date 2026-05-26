@@ -17,7 +17,7 @@ import torch.nn as nn
 
 
 class NTXentLoss(nn.Module):
-    """Vectorised NT-Xent loss — no Python loop over the batch."""
+    """Vectorised NT-Xent loss - no Python loop over the batch."""
 
     def __init__(self, temperature: float = 0.5) -> None:
         super().__init__()
@@ -28,8 +28,8 @@ class NTXentLoss(nn.Module):
 
         Parameters
         ----------
-        z_i : (N, D) — L2-normalised projections of the first views.
-        z_j : (N, D) — L2-normalised projections of the second views.
+        z_i : (N, D) - L2-normalised projections of the first views.
+        z_j : (N, D) - L2-normalised projections of the second views.
 
         Returns
         -------

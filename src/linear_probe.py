@@ -2,7 +2,7 @@
 
 Protocol: freeze the backbone, discard the projection head, train a single
 linear layer (512 → 10) on CIFAR-10 labels.  This measures how linearly
-separable the learned representations are — the standard SSL evaluation.
+separable the learned representations are - the standard SSL evaluation.
 """
 
 from __future__ import annotations
@@ -73,7 +73,7 @@ def linear_probe(
     model.load_state_dict(ckpt["model_state_dict"])
     print(f"Loaded checkpoint from epoch {ckpt['epoch']} (loss={ckpt['loss']:.4f})")
 
-    # Freeze backbone — only the linear head will be trained
+    # Freeze backbone - only the linear head will be trained
     model.eval()
     for param in model.parameters():
         param.requires_grad = False

@@ -2,7 +2,7 @@
 
 The two CIFAR-specific modifications to a standard ImageNet ResNet-18 are:
 1. Replace the 7x7 stride-2 conv1 with a 3x3 stride-1 conv (32x32 images
-   are already small — a 7x7 kernel would collapse spatial information).
+   are already small - a 7x7 kernel would collapse spatial information).
 2. Remove the initial max-pool for the same reason.
 
 The projection head maps the 512-d backbone features into a 128-d space where
@@ -32,7 +32,7 @@ class ResNet18CIFAR(ResNet):
         self.conv1 = nn.Conv2d(3, 64, kernel_size=3, stride=1, padding=1, bias=False)
         # Remove the max-pool entirely (identity keeps the forward path valid)
         self.maxpool = nn.Identity()
-        # We don't need the classifier — features come from avgpool
+        # We don't need the classifier - features come from avgpool
         del self.fc
 
     def forward(self, x: torch.Tensor) -> torch.Tensor:
@@ -81,8 +81,8 @@ class SimCLRModel(nn.Module):
     """Full SimCLR model: backbone encoder + projection head.
 
     ``forward`` returns both representations so the caller can choose:
-    * *features* (512-d) — for downstream tasks (linear probe).
-    * *projections* (128-d, L2-normed) — for the contrastive loss.
+    * *features* (512-d) - for downstream tasks (linear probe).
+    * *projections* (128-d, L2-normed) - for the contrastive loss.
     """
 
     def __init__(self, projection_dim: int = 128, hidden_dim: int = 512) -> None:

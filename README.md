@@ -1,8 +1,8 @@
 # SimCLR on CIFAR-10 (PyTorch)
 
-A from-scratch implementation of **SimCLR** (Chen et al., 2020 — *A Simple Framework for Contrastive Learning of Visual Representations*) trained on CIFAR-10, with linear-probe evaluation.
+A from-scratch implementation of **SimCLR** (Chen et al., 2020 - *A Simple Framework for Contrastive Learning of Visual Representations*) trained on CIFAR-10, with linear-probe evaluation.
 
-No pre-built SSL libraries — pure PyTorch + torchvision for the dataset and base ResNet building blocks.
+No pre-built SSL libraries - pure PyTorch + torchvision for the dataset and base ResNet building blocks.
 
 ## Quick start
 
