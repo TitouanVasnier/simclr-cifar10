@@ -116,7 +116,7 @@ def pretrain(
             with torch.amp.autocast("cuda", enabled=(device.type == "cuda")):
                 _, z_i = model(x_i)
                 _, z_j = model(x_j)
-                loss = criterion(z_i, z_j)
+            loss = criterion(z_i.float(), z_j.float())
 
             scaler.scale(loss).backward()
             scaler.step(optimizer)

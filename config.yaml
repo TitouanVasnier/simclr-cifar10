@@ -5,15 +5,15 @@ seed: 42
 # Pretraining
 pretrain:
   batch_size: 256
-  epochs: 200
+  epochs: 500
   lr_base: 0.5            # scaled as lr_base * batch_size / 256
   momentum: 0.9
   weight_decay: 5.0e-4
   warmup_epochs: 10
-  temperature: 0.5
+  temperature: 0.2
   projection_dim: 128
   hidden_dim: 512
-  checkpoint_every: 50
+  checkpoint_every: 100
 
 # Linear probing
 probe:
